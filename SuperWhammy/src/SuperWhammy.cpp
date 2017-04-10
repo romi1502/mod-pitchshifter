@@ -5,7 +5,7 @@
 
 /**********************************************************************************************************************************************************/
 
-#define PLUGIN_URI "http://moddevices.com/plugins/mod-devel/SuperWhammySmooth"
+#define PLUGIN_URI "http://moddevices.com/plugins/mod-devel/SuperWhammy"
 #define FIDELITY0 6,3,2,1
 #define FIDELITY1 12,6,3,2
 #define FIDELITY2 16,8,4,2
