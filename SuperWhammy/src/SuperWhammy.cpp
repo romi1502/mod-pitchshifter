@@ -11,7 +11,7 @@
 #define FIDELITY2 16,8,4,2
 #define FIDELITY3 20,10,5,3
 #define SMOOTH_DURATION 0.1
-enum {IN, OUT, STEP, SMOOTHTIME FIRST, LAST, CLEAN, GAIN, FIDELITY, PLUGIN_PORT_COUNT};
+enum {IN, OUT, STEP, SMOOTHTIME, FIRST, LAST, CLEAN, GAIN, FIDELITY, PLUGIN_PORT_COUNT};
 
 /**********************************************************************************************************************************************************/
 
