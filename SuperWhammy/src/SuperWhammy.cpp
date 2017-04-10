@@ -5,13 +5,13 @@
 
 /**********************************************************************************************************************************************************/
 
-#define PLUGIN_URI "http://moddevices.com/plugins/mod-devel/SuperWhammy"
+#define PLUGIN_URI "http://moddevices.com/plugins/mod-devel/SuperWhammySmooth"
 #define FIDELITY0 6,3,2,1
 #define FIDELITY1 12,6,3,2
 #define FIDELITY2 16,8,4,2
 #define FIDELITY3 20,10,5,3
 #define SMOOTH_DURATION 0.1
-enum {IN, OUT, STEP, FIRST, LAST, CLEAN, GAIN, FIDELITY, PLUGIN_PORT_COUNT};
+enum {IN, OUT, STEP, SMOOTHTIME FIRST, LAST, CLEAN, GAIN, FIDELITY, PLUGIN_PORT_COUNT};
 
 /**********************************************************************************************************************************************************/
 
@@ -155,6 +155,7 @@ void SuperWhammy::run(LV2_Handle instance, uint32_t n_samples)
     float *in       = plugin->ports[IN];
     float *out      = plugin->ports[OUT];
     double s        = (double)(*(plugin->ports[STEP]));
+    double smoothtime        = (double)(*(plugin->ports[SMOOTHTIME]));
     double gain     = (double)(*(plugin->ports[GAIN]));
     double a        = (double)(*(plugin->ports[FIRST]));
     double b        = (double)(*(plugin->ports[LAST]));
@@ -170,7 +171,7 @@ void SuperWhammy::run(LV2_Handle instance, uint32_t n_samples)
     }
 
     double buffer_duration = n_samples/((double) plugin->SampleRate);
-    double alpha = std::pow(0.01, buffer_duration/SMOOTH_DURATION);
+    double alpha = std::pow(0.01, buffer_duration/smoothtime);
     plugin->current_s = alpha*plugin->current_s + (1-alpha)*s;
 
     double s_ = a + plugin->current_s*(b-a);
