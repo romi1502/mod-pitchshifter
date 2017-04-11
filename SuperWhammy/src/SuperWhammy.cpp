@@ -170,8 +170,8 @@ void SuperWhammy::run(LV2_Handle instance, uint32_t n_samples)
         return;
     }
 
-    double smoothtime=0.0001
-    if (smoothstep==1):
+    double smoothtime=0.0001;
+    if (smoothstep==1)
         smoothtime=0.1;
 
     double buffer_duration = n_samples/((double) plugin->SampleRate);
