@@ -155,7 +155,7 @@ void SuperWhammy::run(LV2_Handle instance, uint32_t n_samples)
     float *in       = plugin->ports[IN];
     float *out      = plugin->ports[OUT];
     double s        = (double)(*(plugin->ports[STEP]));
-    int smoothstep        = (*(plugin->ports[SMOOTSTEP]));
+    int smoothstep  = (int)(*(plugin->ports[SMOOTHSTEP])+0.5f);
     double gain     = (double)(*(plugin->ports[GAIN]));
     double a        = (double)(*(plugin->ports[FIRST]));
     double b        = (double)(*(plugin->ports[LAST]));
