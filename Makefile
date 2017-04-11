@@ -1,33 +1,33 @@
 
 all: Shared_files/harmonizer.wisdom
-	$(MAKE) -C 2Voices
-	$(MAKE) -C Capo
-	$(MAKE) -C Drop
-	$(MAKE) -C SuperCapo
+	# $(MAKE) -C 2Voices
+	# $(MAKE) -C Capo
+	# $(MAKE) -C Drop
+	# $(MAKE) -C SuperCapo
 	$(MAKE) -C SuperWhammy
-	$(MAKE) -C Harmonizer
-	$(MAKE) -C Harmonizer2
-	$(MAKE) -C HarmonizerCS
+	# $(MAKE) -C Harmonizer
+	# $(MAKE) -C Harmonizer2
+	# $(MAKE) -C HarmonizerCS
 
 install: all
-	$(MAKE) -C 2Voices install
-	$(MAKE) -C Capo install
-	$(MAKE) -C Drop install
-	$(MAKE) -C SuperCapo install
+	# $(MAKE) -C 2Voices install
+	# $(MAKE) -C Capo install
+	# $(MAKE) -C Drop install
+	# $(MAKE) -C SuperCapo install
 	$(MAKE) -C SuperWhammy install
-	$(MAKE) -C Harmonizer install
-	$(MAKE) -C Harmonizer2 install
-	$(MAKE) -C HarmonizerCS install
+	# $(MAKE) -C Harmonizer install
+	# $(MAKE) -C Harmonizer2 install
+	# $(MAKE) -C HarmonizerCS install
 
 clean:
-	$(MAKE) -C 2Voices clean
-	$(MAKE) -C Capo clean
-	$(MAKE) -C Drop clean
-	$(MAKE) -C SuperCapo clean
+	# $(MAKE) -C 2Voices clean
+	# $(MAKE) -C Capo clean
+	# $(MAKE) -C Drop clean
+	# $(MAKE) -C SuperCapo clean
 	$(MAKE) -C SuperWhammy clean
-	$(MAKE) -C Harmonizer clean
-	$(MAKE) -C Harmonizer2 clean
-	$(MAKE) -C HarmonizerCS clean
+	# $(MAKE) -C Harmonizer clean
+	# $(MAKE) -C Harmonizer2 clean
+	# $(MAKE) -C HarmonizerCS clean
 	rm -f Shared_files/*.o
 	rm -f Shared_files/harmonizer.wisdom
 
